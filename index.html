@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSphere — Cổng Trải Nghiệm Sinh Viên & Công Nghệ Số</title>
+    <meta name="description" content="Trang web thử nghiệm hiện đại dành cho sinh viên: Khám phá câu lạc bộ, tham gia sự kiện và kết nối tương lai.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Background Ambient Glow Orbs -->
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="site-nav">
+      <div class="container nav-wrapper">
+        <a href="#hero" class="brand-logo" id="site-brand">
+          <div class="logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span>Edu<span class="gradient-text">Sphere</span></span>
+        </a>
+
+        <nav aria-label="Điều hướng trang web">
+          <ul class="nav-links">
+            <li><a href="#hero" class="active">Trang chủ</a></li>
+            <li><a href="#features">Tính năng</a></li>
+            <li><a href="#showcase">Khám phá</a></li>
+            <li><a href="#interactive-demo">Thử nghiệm</a></li>
+            <li><a href="#faq">Hỏi đáp</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="theme-toggle" type="button" aria-label="Chuyển chế độ sáng tối">
+            <span id="theme-icon">
+              <!-- SVG icon sẽ được nạp qua script.js -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+          <a href="#interactive-demo" class="btn btn-primary btn-sm">Tham gia ngay</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Phiên bản thử nghiệm 2026 · Front End Modern</span>
+            </div>
+            <h1 class="hero-title">
+              Nền tảng kết nối <br>
+              <span class="gradient-text">Câu lạc bộ & Sự kiện</span> sinh viên
+            </h1>
+            <p class="hero-description">
+              Khám phá không gian học tập và sáng tạo không giới hạn. Tìm kiếm câu lạc bộ đúng đam mê, quản lý lịch hoạt động ngoại khóa và bứt phá kỹ năng ngay hôm nay.
+            </p>
+            <div class="hero-actions">
+              <a href="#showcase" class="btn btn-primary">
+                Khám phá câu lạc bộ
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#interactive-demo" class="btn btn-ghost">Đăng ký trải nghiệm</a>
+            </div>
+
+            <!-- Counter Metrics -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <h4><span class="counter-val" data-target="1500">0</span>+</h4>
+                <p>Sinh viên tham gia</p>
+              </div>
+              <div class="metric-item">
+                <h4><span class="counter-val" data-target="24">0</span>+</h4>
+                <p>Câu lạc bộ năng động</p>
+              </div>
+              <div class="metric-item">
+                <h4><span class="counter-val" data-target="98">0</span>%</h4>
+                <p>Đánh giá hài lòng</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Graphic Showcase Card -->
+          <div class="hero-card glass-panel">
+            <div class="card-header-bar">
+              <div class="dot-group">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="card-status">● Live Activity</span>
+            </div>
+
+            <div class="preview-code-block">
+              <span class="comment">// Đăng ký hoạt động CLB theo thời gian thực</span><br>
+              <span class="keyword">const</span> student = <span class="keyword">new</span> <span class="function">StudentMember</span>({<br>
+              &nbsp;&nbsp;id: <span class="string">"0024410123"</span>,<br>
+              &nbsp;&nbsp;role: <span class="string">"Lập trình viên Front-End"</span>,<br>
+              &nbsp;&nbsp;status: <span class="string">"Active"</span><br>
+              });<br>
+              <span class="function">student.join</span>(<span class="string">"CLB Tin học DThU"</span>);
+            </div>
+
+            <div class="floating-interactive-item">
+              <div class="user-snippet">
+                <div class="avatar-circle">DH</div>
+                <div>
+                  <strong style="display:block; font-size:0.9rem;">Workshop: HTML & CSS Hiện Đại</strong>
+                  <small style="color:var(--text-muted);">Thứ Bảy, 17/10 · Phòng máy B1.203</small>
+                </div>
+              </div>
+              <span class="category-tag">Hot</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section-padding container">
+        <div class="section-head">
+          <p class="section-subtitle">ĐẶC QUYỀN SINH VIÊN</p>
+          <h2 class="section-title">Tại sao chọn <span class="gradient-text">EduSphere</span>?</h2>
+          <p class="section-description">
+            Được thiết kế với công nghệ CSS thuần hiện đại, đem lại hiệu năng tải cực nhanh, độ tương phản tối ưu và giao diện trực quan thân thiện.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card glass-panel">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>Giao diện Đẳng cấp</h3>
+            <p>Ứng dụng hiệu ứng Glassmorphism sắc nét, bảng màu cân chỉnh chuẩn HSL, hỗ trợ chế độ Tối/Sáng thông minh.</p>
+          </article>
+
+          <article class="feature-card glass-panel">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Lịch Trình Tự Động</h3>
+            <p>Cập nhật tự động từng sự kiện, ngày giờ, số ghế còn lại và phân loại theo từng câu lạc bộ yêu thích.</p>
+          </article>
+
+          <article class="feature-card glass-panel">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Kết Nối Đồng Đội</h3>
+            <p>Tham gia giao lưu, làm việc nhóm, chia sẻ tài liệu và rèn luyện kỹ năng mềm cùng sinh viên toàn trường.</p>
+          </article>
+
+          <article class="feature-card glass-panel">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Chuẩn Accessibility (A11y)</h3>
+            <p>Tương thích hoàn hảo với bàn phím, đầu đọc màn hình, tiêu chuẩn tương phản WCAG và kích thước điểm chạm chuẩn di động.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Filterable Showcase Section -->
+      <section id="showcase" class="section-padding container">
+        <div class="section-head">
+          <p class="section-subtitle">DANH MỤC TIÊU BIỂU</p>
+          <h2 class="section-title">Khám phá <span class="gradient-text">Câu Lạc Bộ Hàng Đầu</span></h2>
+          <p class="section-description">Lọc theo các lĩnh vực bạn quan tâm để tìm môi trường rèn luyện lý tưởng.</p>
+        </div>
+
+        <!-- Filter Tab Buttons -->
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-filter="all" type="button">Tất cả</button>
+          <button class="tab-btn" data-filter="tech" type="button">Công nghệ</button>
+          <button class="tab-btn" data-filter="volunteer" type="button">Tình nguyện</button>
+          <button class="tab-btn" data-filter="skills" type="button">Kỹ năng</button>
+        </div>
+
+        <!-- Project / Event Cards -->
+        <div class="cards-container">
+          <article class="project-card glass-panel" data-category="tech">
+            <div class="card-top">
+              <span class="category-tag">Công nghệ</span>
+              <span class="rating-badge">★ 4.9 (120+)</span>
+            </div>
+            <h4>CLB Tin học & Sáng tạo</h4>
+            <p>Nơi tập hợp những bạn trẻ đam mê viết code, thiết kế web, lập trình thuật toán và tham gia các kỳ thi Olympic toàn quốc.</p>
+            <div class="card-footer">
+              <span class="author-info">Phòng máy B1.203</span>
+              <a href="#interactive-demo" class="btn btn-ghost btn-sm">Xem chi tiết</a>
+            </div>
+          </article>
+
+          <article class="project-card glass-panel" data-category="volunteer">
+            <div class="card-top">
+              <span class="category-tag">Tình nguyện</span>
+              <span class="rating-badge">★ 5.0 (300+)</span>
+            </div>
+            <h4>CLB Tình nguyện Trẻ</h4>
+            <p>Tổ chức các hoạt động ý nghĩa như Tiếp sức mùa thi, Mùa hè xanh, Ngày hội Hiến máu nhân đạo và hỗ trợ cộng đồng vùng sâu.</p>
+            <div class="card-footer">
+              <span class="author-info">Văn phòng Đoàn - Hội</span>
+              <a href="#interactive-demo" class="btn btn-ghost btn-sm">Xem chi tiết</a>
+            </div>
+          </article>
+
+          <article class="project-card glass-panel" data-category="skills">
+            <div class="card-top">
+              <span class="category-tag">Kỹ năng</span>
+              <span class="rating-badge">★ 4.8 (85+)</span>
+            </div>
+            <h4>CLB Tiếng Anh & Thuyết trình</h4>
+            <p>Môi trường luyện nói tiếng Anh hằng tuần (English Speaking Club), trang bị kỹ năng đàm phán, làm việc nhóm và phỏng vấn xin việc.</p>
+            <div class="card-footer">
+              <span class="author-info">Sảnh nhà A1</span>
+              <a href="#interactive-demo" class="btn btn-ghost btn-sm">Xem chi tiết</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Interactive Demo Section (Widget / Form Simulator) -->
+      <section id="interactive-demo" class="section-padding widget-section">
+        <div class="container">
+          <div class="widget-wrapper glass-panel">
+            <div class="section-head" style="margin-bottom: 2rem;">
+              <p class="section-subtitle">TRẢI NGHIỆM TRỰC TUYẾN</p>
+              <h2 class="section-title">Đăng ký Nguyện vọng Thử nghiệm</h2>
+              <p class="section-description">
+                Nhập thông tin thử để xem phản hồi tức thì từ hệ thống tương tác bằng JavaScript.
+              </p>
+            </div>
+
+            <form id="demo-register-form">
+              <div class="widget-form-grid">
+                <div class="form-group">
+                  <label for="demo-name">Họ và tên sinh viên *</label>
+                  <input type="text" id="demo-name" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="demo-club">Chọn Câu lạc bộ mong muốn *</label>
+                  <select id="demo-club" class="form-control" required>
+                    <option value="">— Vui lòng chọn —</option>
+                    <option value="CLB Tin học">CLB Tin học</option>
+                    <option value="CLB Tình nguyện">CLB Tình nguyện</option>
+                    <option value="CLB Tiếng Anh">CLB Tiếng Anh</option>
+                    <option value="CLB Kỹ năng mềm">CLB Kỹ năng mềm</option>
+                    <option value="CLB Âm nhạc">CLB Âm nhạc</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="demo-role">Vai trò mong muốn đóng góp</label>
+                  <select id="demo-role" class="form-control">
+                    <option value="Thành viên học tập">Thành viên học tập / rèn luyện</option>
+                    <option value="Ban Truyền thông & Thiết kế">Ban Truyền thông & Thiết kế</option>
+                    <option value="Ban Hậu cần & Sự kiện">Ban Hậu cần & Sự kiện</option>
+                    <option value="Cộng tác viên kỹ thuật">Cộng tác viên kỹ thuật</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="demo-notes">Mục tiêu cá nhân</label>
+                  <input type="text" id="demo-notes" class="form-control" placeholder="Ví dụ: Nâng cao kỹ năng lập trình web">
+                </div>
+              </div>
+
+              <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary" id="btn-submit-demo">
+                  Gửi đăng ký thử nghiệm
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Live Result Feedback Box -->
+              <div id="live-feedback-box" class="live-feedback-box"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (Accordion) -->
+      <section id="faq" class="section-padding container">
+        <div class="section-head">
+          <p class="section-subtitle">GIẢI ĐÁP THẮC MẮC</p>
+          <h2 class="section-title">Câu hỏi <span class="gradient-text">thường gặp</span></h2>
+          <p class="section-description">Mọi điều bạn cần biết về hoạt động ngoại khóa và quy trình gia nhập.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Trang web này được xây dựng bằng những công nghệ gì?</span>
+              <span class="faq-icon">↓</span>
+            </button>
+            <div class="faq-answer">
+              Trang web được xây dựng 100% bằng HTML5 ngữ nghĩa, CSS thuần hiện đại (CSS Variables, Flexbox, CSS Grid, Glassmorphism) và JavaScript ES6 xử lý tương tác trực tiếp, không sử dụng thêm thư viện cồng kềnh.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Tôi có thể tham gia nhiều câu lạc bộ cùng lúc không?</span>
+              <span class="faq-icon">↓</span>
+            </button>
+            <div class="faq-answer">
+              Hoàn toàn có thể! Tuy nhiên, nhà trường khuyến khích mỗi sinh viên nên tham gia tối đa 2 câu lạc bộ để đảm bảo cân đối thời gian giữa việc học chính khóa và sinh hoạt ngoại khóa.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Tham gia các câu lạc bộ có được cộng điểm rèn luyện không?</span>
+              <span class="faq-icon">↓</span>
+            </button>
+            <div class="faq-answer">
+              Có. Khi tham gia đầy đủ các buổi sinh hoạt định kỳ hoặc có đóng góp trong các sự kiện cấp trường/khoa, sinh viên sẽ được cấp giấy chứng nhận và cộng điểm rèn luyện tương ứng vào học kỳ đó.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="brand-logo">
+              <div class="logo-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span>Edu<span class="gradient-text">Sphere</span></span>
+            </a>
+            <p>Trang web thử nghiệm kiến trúc Front End hiện đại dành cho sinh viên và các nhà phát triển trẻ.</p>
+          </div>
+
+          <div class="footer-col">
+            <h5>Liên kết nhanh</h5>
+            <ul>
+              <li><a href="#hero">Trang chủ</a></li>
+              <li><a href="#features">Tính năng</a></li>
+              <li><a href="#showcase">Khám phá CLB</a></li>
+              <li><a href="#faq">Câu hỏi thường gặp</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Tài nguyên</h5>
+            <ul>
+              <li><a href="../starter/index.html">EduHub Starter</a></li>
+              <li><a href="../starter/events.html">Lịch sự kiện</a></li>
+              <li><a href="../starter/register.html">Đăng ký môn học</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Hỗ trợ</h5>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom: 0.5rem;">Email: contact@edusphere.dthu.edu.vn</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Địa chỉ: TP. Cao Lãnh, Đồng Tháp</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 EduSphere Test Web. Xây dựng cho bài thực hành IN4529 Front End.</p>
+          <p>Thiết kế với phong cách Glassmorphism &amp; Responsive thuần CSS.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
